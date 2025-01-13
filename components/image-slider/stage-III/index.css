@@ -1,0 +1,73 @@
+h1 {
+  font-size: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.font-kablammo {
+  font-family: "Kablammo", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "MORF" 0;
+}
+
+#left-icon,
+#right-icon {
+  width: 3rem;
+  border-radius: 10px;
+  display: flex;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#left-icon:hover,
+#right-icon:hover {
+  background-color: #eeeeee;
+}
+
+#wrapper {
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  gap: 1rem;
+  border-radius: 10px;
+  height: 50rem;
+  overflow: hidden;
+}
+
+
+.img-holder {
+  display: flex;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: right 1s ease-in-out;
+}
+
+.img-holder-left {
+  right: 100%;
+}
+
+.img-holder-right {
+  right: -100%;
+}
+
+.img-holder-active {
+  right: 0;
+}
+
+
+img {
+  border-radius: 10px;
+}

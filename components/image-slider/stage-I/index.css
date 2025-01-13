@@ -1,0 +1,59 @@
+h1 {
+  font-size: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.font-kablammo {
+  font-family: "Kablammo", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "MORF" 0;
+}
+
+#left-icon,
+#right-icon {
+  width: 3rem;
+  border-radius: 10px;
+  display: flex;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#left-icon:hover,
+#right-icon:hover {
+  background-color: #eeeeee;
+}
+
+#wrapper {
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  gap: 1rem;
+  border-radius: 10px;
+  height: 50rem;
+  overflow: hidden;
+}
+
+.img-holder {
+  display: none;
+}
+
+.img-holder-active {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+img {
+  border-radius: 10px;
+}

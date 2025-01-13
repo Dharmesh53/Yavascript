@@ -147,3 +147,32 @@ esimorp.resolve("Resolved immediately").then((value) => console.log(value));
 
 const myPromise4 = new esimorp((resolve) => setTimeout(() => resolve("Resolved after 2 seconds"), 2000))
 esimorp.resolve(myPromise4).then((value) => console.log(value));
+
+
+
+function promiseAll(functions) {
+  return new Promise((_, reject) => {
+    let result = [];
+    let resolvedCount = 0;
+
+    functions.forEach((func, index) => {
+      func(...args)
+        .then((data) => {
+          result[index] = data
+
+          resolvedCount++;
+
+          if (resolvedCount == functions.length) {
+            resolve(result)
+          }
+        })
+        .catch((error) => {
+          reject(error)
+        })
+    })
+
+    if (resolvedCount == functions.length) {
+      resolve(result)
+    }
+  })
+}

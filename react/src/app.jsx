@@ -83,6 +83,8 @@ const App = () => {
     <div style={{ padding: "20px" }}>
       <h1>Autocomplete Input</h1>
       <AutocompleteInput suggestions={array} />
+
+
     </div>
   );
 };
